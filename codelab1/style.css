@@ -1,0 +1,43 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table{
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid;
+    text-align: center;
+}
+
+td.web {
+    background-color: #ffcccb;
+}
+
+td.pc {
+    background-color: #add8e6;
+}
+
+td.mb {
+    background-color: #90ee90;
+}
+
+td.func {
+    background-color: #f0e68c;
+}
+
+tr:first-child td {
+    background-color: #ddd;
+    font-weight: bold;
+}
