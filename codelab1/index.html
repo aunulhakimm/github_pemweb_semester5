@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Penjumlahan</h2>
+        <form id="calculatorForm">
+            <label for="num1">Bilangan pertama</label>
+            <input type="number" id="num1" required>
+
+            <label for="num2">Bilangan kedua</label>
+            <input type="number" id="num2" required>
+
+            <div class="buttons">
+                <button type="button" onclick="calculate()">Jumlahkan</button>
+                <button type="reset" onclick="resetResult()">Reset</button>
+            </div>
+
+            <p>Hasil: <span id="result">0</span></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* Background dengan gradasi hitam ke bawah */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #333333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+/* Ubah warna tombol menjadi hitam */
+button {
+    background-color: #000000; /* Warna hitam */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444; /* Hitam ke abu-abu saat hover */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
