@@ -1,0 +1,85 @@
+/* Background gradasi seperti sebelumnya */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #333333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Notifikasi di bagian atas */
+.notification {
+    display: none;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Desain form */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 80px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+/* Tombol hitam */
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444;
+}
