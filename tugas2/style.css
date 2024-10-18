@@ -46,7 +46,7 @@ input {
 button {
     width: 20%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #e98409;
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,7 +54,8 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #bd7823;
+
 }
 
 ul {
@@ -93,11 +94,11 @@ li button.edit i, li button.delete i {
 }
 
 li button.edit {
-    background-color: #007bff;
+    background-color: #28a745;
 }
 
 li button.edit:hover {
-    background-color: #0056b3;
+    background-color: #276a35;
 }
 
 li button.delete {
@@ -105,5 +106,5 @@ li button.delete {
 }
 
 li button.delete:hover {
-    background-color: #c82333;
+    background-color: #992531;
 }
