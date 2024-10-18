@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, black, gray);
+    font-family: Arial, sans-serif;
+}
+
+.kalkulator {
+    width: 320px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right; /* Teks berada di sisi kanan */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden; /* Menyembunyikan teks yang terlalu panjang */
+    direction: ltr; /* Mengatur teks dari kiri ke kanan */
+}
+
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: #555;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn.operator {
+    background-color: #888;
+}
+
+.btn.equals {
+    background-color: orange;
+    padding: 15px; /* Perkecil padding tombol "=" */
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+.btn.operator:hover {
+    background-color: #a09fa0;
+}
+
+.btn.equals:hover {
+    background-color: #ffb347;
+}
