@@ -1,3 +1,4 @@
+/* Aturan dasar */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,10 +12,12 @@ body {
     height: 100vh;
     background: linear-gradient(to bottom, black, gray);
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 .kalkulator {
-    width: 320px;
+    width: 100%;
+    max-width: 320px; /* Batasi lebar maksimum */
     background-color: #333;
     border-radius: 20px;
     padding: 20px;
@@ -26,20 +29,18 @@ body {
     background-color: #222;
     color: #fff;
     font-size: 2.5em;
-    text-align: right; /* Teks berada di sisi kanan */
+    text-align: right;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
     white-space: nowrap;
-    overflow: hidden; /* Menyembunyikan teks yang terlalu panjang */
-    direction: ltr; /* Mengatur teks dari kiri ke kanan */
+    overflow: hidden;
+    direction: ltr;
 }
-
-
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Grid tombol 4 kolom */
     gap: 10px;
 }
 
@@ -51,6 +52,7 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn.operator {
@@ -59,7 +61,7 @@ body {
 
 .btn.equals {
     background-color: orange;
-    padding: 15px; /* Perkecil padding tombol "=" */
+    padding: 15px;
 }
 
 .btn:hover {
@@ -72,4 +74,53 @@ body {
 
 .btn.equals:hover {
     background-color: #ffb347;
+}
+
+/* MEDIA QUERIES */
+
+/* Untuk layar dengan lebar maksimal 768px (tablet) */
+@media (max-width: 768px) {
+    .kalkulator {
+        max-width: 90%; /* Lebar penuh hampir seluruh layar */
+    }
+
+    .display {
+        font-size: 2em; /* Ukuran font lebih kecil */
+    }
+
+    .btn {
+        font-size: 1.3em; /* Ukuran tombol sedikit lebih kecil */
+        padding: 18px; /* Kurangi padding pada tombol */
+    }
+
+    .btn.equals {
+        padding: 14px;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .kalkulator {
+        max-width: 100%; /* Lebar penuh pada ponsel kecil */
+        padding: 15px; /* Kurangi padding container */
+    }
+
+    .display {
+        font-size: 1.8em; /* Ukuran font lebih kecil */
+        padding: 8px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(2, 1fr); /* Ubah grid menjadi 2 kolom pada layar kecil */
+        gap: 8px;
+    }
+
+    .btn {
+        font-size: 1.2em; /* Sesuaikan ukuran tombol */
+        padding: 16px; /* Kurangi padding pada tombol */
+    }
+
+    .btn.equals {
+        padding: 12px;
+    }
 }
