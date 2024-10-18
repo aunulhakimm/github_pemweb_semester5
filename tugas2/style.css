@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #333);
+}
+
+.container {
+    width: 450px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Perbaikan shadow */
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+    background-color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff;
+}
+
+li div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Tambahkan jarak antara tombol */
+}
+
+li button {
+    padding: 10px; /* Sesuaikan padding tombol untuk keseragaman */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40px; /* Sesuaikan lebar tombol */
+}
+
+li button.edit i, li button.delete i {
+    font-size: 16px; /* Ukuran ikon */
+    color: white;
+}
+
+li button.edit {
+    background-color: #007bff;
+}
+
+li button.edit:hover {
+    background-color: #0056b3;
+}
+
+li button.delete {
+    background-color: #dc3545;
+}
+
+li button.delete:hover {
+    background-color: #c82333;
+}
