@@ -1,9 +1,11 @@
+/* Aturan dasar untuk seluruh elemen */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Tampilan utama pada layar besar */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -11,29 +13,38 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom, #000, #333);
+    padding: 20px; /* Tambahkan padding untuk margin di layar kecil */
 }
 
+/* Container to-do list */
 .container {
-    width: 450px;
+    width: 100%;
+    max-width: 450px; /* Batas maksimum lebar di perangkat besar */
     padding: 20px;
     background-color: #222;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Perbaikan shadow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px; /* Batasi tinggi container */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
+    font-size: 1.5rem;
 }
 
+/* Kontainer input */
 .input-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
+/* Input text */
 input {
     width: 75%;
     padding: 10px;
@@ -43,6 +54,7 @@ input {
     color: #fff;
 }
 
+/* Tombol */
 button {
     width: 20%;
     padding: 10px;
@@ -51,45 +63,57 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #bd7823;
-
 }
 
+/* Daftar tugas */
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Batasi tinggi ul */
+    overflow-y: auto; /* Tambahkan scrollbar jika diperlukan */
 }
 
+/* Item dalam daftar tugas */
 li {
     padding: 10px;
     background-color: #444;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Ubah align untuk memulai dari atas */
     border-radius: 5px;
     color: #fff;
+    word-wrap: break-word; /* Pastikan kata panjang turun ke baris berikutnya */
+    word-break: break-word; /* Pecah kata panjang agar tidak melampaui batas */
+    overflow-wrap: break-word; /* Tambahan untuk mendukung kompatibilitas */
+    max-width: 100%; /* Pastikan li tidak melampaui container */
 }
 
 li div {
     display: flex;
     justify-content: flex-end;
-    gap: 10px; /* Tambahkan jarak antara tombol */
+    gap: 10px;
+    flex-shrink: 0; /* Mencegah tombol mengecil ketika teks panjang */
 }
 
+/* Tombol edit dan delete dalam li */
 li button {
-    padding: 10px; /* Sesuaikan padding tombol untuk keseragaman */
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 40px; /* Sesuaikan lebar tombol */
+    width: 40px;
 }
 
 li button.edit i, li button.delete i {
-    font-size: 16px; /* Ukuran ikon */
+    font-size: 16px;
     color: white;
 }
 
@@ -107,4 +131,73 @@ li button.delete {
 
 li button.delete:hover {
     background-color: #992531;
+}
+
+/* MEDIA QUERIES */
+
+/* Untuk layar dengan lebar maksimal 768px (tablet atau ponsel besar) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%; /* Lebar container lebih besar di layar kecil */
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        width: 22%; /* Lebar tombol sedikit lebih besar agar mudah ditekan */
+    }
+
+    input {
+        width: 73%; /* Lebar input disesuaikan */
+    }
+
+    li {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 100%; /* Lebar penuh pada ponsel kecil */
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .input-container {
+        flex-direction: column; /* Input dan tombol dalam satu kolom */
+        align-items: flex-start;
+    }
+
+    input, button {
+        width: 100%; /* Lebar penuh untuk input dan tombol */
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 12px; /* Tombol lebih besar agar lebih mudah ditekan */
+    }
+
+    ul {
+        max-height: 200px; /* Batasi tinggi daftar pada layar kecil */
+    }
+
+    li {
+        font-size: 0.85rem; /* Ukuran font lebih kecil */
+        padding: 8px; /* Kurangi padding agar lebih kompak */
+    }
+
+    li button {
+        width: 35px; /* Sesuaikan lebar tombol pada layar kecil */
+    }
+
+    li button.edit i, li button.delete i {
+        font-size: 14px; /* Ukuran ikon lebih kecil */
+    }
 }
